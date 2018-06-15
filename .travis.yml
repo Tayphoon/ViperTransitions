@@ -1,0 +1,10 @@
+language: swift
+osx_image: xcode9.2
+
+branches:
+  only:
+  - master
+  - development
+  
+script:
+- xcodebuild clean build test -project ViperTransitions.xcodeproj -scheme ViperTransitions -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3'
